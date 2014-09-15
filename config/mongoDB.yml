@@ -1,0 +1,24 @@
+Default: &defaults
+  user: admin
+  password: admin
+  host: ds045099.mongolab.com:45099
+  database: flughafentaxi
+  connections: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: flughafentaxi_test
+  <<: *defaults
+
+Staging:
+  database: flughafentaxi_staging
+  connections: 100
+  <<: *defaults
+
+Production:
+  database: flughafentaxi_production
+  connections: 100
+  host: localhost
+  <<: *defaults
