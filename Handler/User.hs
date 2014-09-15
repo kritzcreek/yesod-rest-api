@@ -1,13 +1,12 @@
-{-# LANGUAGE TupleSections, OverloadedStrings #-}
-module Handler.User where
-
 {-# LANGUAGE QuasiQuotes, TypeFamilies, GeneralizedNewtypeDeriving, TemplateHaskell,
 OverloadedStrings, GADTs, FlexibleContexts #-}
 
+module Handler.User where
 
 import Import
 
 import Database.Persist.Types (PersistValue(PersistInt64))
+import Database.Persist.MongoDB
 import Database.Persist.Class (PersistEntity(Key))
 
 getUserR :: String -> Handler Value
