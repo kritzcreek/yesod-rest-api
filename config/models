@@ -5,7 +5,6 @@ Email
     UniqueEmail email
 User
     tlc Text
-    user UserId Maybe
     firstname Text
     lastname Text
 
